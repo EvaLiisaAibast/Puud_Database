@@ -1,0 +1,146 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("https://img.freepik.com/free-photo/jungle-landscape-pixel-art-style_23-2151557074.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff; 
+}
+
+/* HEADER */
+header {
+    background: #328731;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+
+.layout {
+    display: flex;
+}
+
+
+.sidebar {
+    width: 280px;
+    background: #328731; 
+    padding: 20px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    border-right: 2px solid #223322;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.25);
+}
+
+.sidebar-card {
+    background: #328731; 
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 1px solid #223322;
+    font-size: 1rem;
+}
+
+
+.main {
+    flex: 1;
+    padding: 30px;
+}
+
+
+.form-box {
+    background: #328731;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 1px solid #223322;
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #223322;
+    background: #328731; 
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+/* BUTTONS */
+button {
+    padding: 6px 14px;
+    margin-top: 10px;
+    background: #328731; 
+    color: #ffffff; 
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #27622a;
+    transform: translateY(-1px);
+}
+
+/* STATS */
+.stats-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    flex: 1;
+    background: #328731; 
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 1px solid #223322;
+}
+
+/* TREE GRID */
+.tree-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 20px;
+}
+
+.tree-card {
+    background: #328731;
+    padding: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 1px solid #223322;
+    font-size: 1rem;
+}
+
+/* MAP */
+.map-container {
+    display: none;
+    margin-top: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 170px;
+    border-radius: 6px;
+    border: none;
+}

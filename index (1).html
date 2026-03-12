@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Minu Puud</title>
+    <link rel="stylesheet" href="projekt2.css">
+</head>
+<body>
+
+<header>
+    <h1>🌳 Minu Istutatud Puud</h1>
+</header>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>Viimati lisatud</h2>
+        <div id="recentTrees"></div>
+    </aside>
+
+ 
+    <main class="main">
+
+             <section class="form-box">
+            <h2>Lisa uus puu (3 liiki)</h2>
+            <p>Vali ainult olemasolevad liigid: mänd, kask või tamm</p>
+
+            <input type="text" id="treeName" placeholder="Puu nimi">
+            <input type="text" id="species" placeholder="Puu liik">
+            <input type="date" id="date">
+
+            <input type="text" id="location" placeholder="Koordinaadid (51.5074,-0.1278)">
+            <button type="button" onclick="getLocation('location')">
+                Kasuta minu asukohta 📍
+            </button>
+
+            <button type="button" onclick="addTree()">Lisa puu</button>
+        </section>
+
+       
+        <section class="form-box">
+            <h2>Lisa oma puu (user-defined)</h2>
+            <p>Saad määrata oma puu liigi ja küpsusaja</p>
+
+            <input type="text" id="userTreeName" placeholder="Puu nimi">
+            <input type="text" id="userSpecies" placeholder="Puu liik">
+            <input type="number" id="userMatureAge" placeholder="Aastad kuni küpsuseni">
+            <input type="date" id="userDate">
+
+            <input type="text" id="userLocation" placeholder="Koordinaadid (51.5074,-0.1278)">
+            <button type="button" onclick="getLocation('userLocation')">
+                Kasuta minu asukohta 📍
+            </button>
+
+            <button type="button" onclick="addUserTree()">Lisa oma puu</button>
+        </section>
+
+       
+        <section class="stats-row">
+            <div class="stat-box">
+                <h3>Puude arv</h3>
+                <p id="treeCount">0</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>CO₂ kokku</h3>
+                <p id="totalCO2">0 kg</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>CO₂ aastas</h3>
+                <p id="yearlyCO2">0 kg/aastas</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Minu puud</h2>
+            <div id="treeList" class="tree-grid"></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
